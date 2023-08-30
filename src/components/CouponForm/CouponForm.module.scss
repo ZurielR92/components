@@ -1,0 +1,116 @@
+.CouponForm {
+    max-width: 1000px;
+    margin: auto;
+    pad: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .section {
+        box-shadow: 0 0 5px rgba(0,0,0,.3);
+        border-radius: 5px;
+        overflow: hidden;
+        > :nth-child(1) {
+            background: rgb(245, 245, 245);
+        }
+        >div {
+            padding: 25px;
+        }
+    }
+}
+
+
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    label {
+        margin: 10px 0 17px 0px;
+        font-size: 15px;
+        font-weight: 600;
+        color: gray;
+    }
+    > input, select, textarea {
+        height: 50px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        padding: 15px 15px;
+        color: gray;
+        border-radius: 5px;
+        outline: gray;
+        border: 2px solid gainsboro;
+        font-family: inherit;
+        resize: none;
+    }
+    > textarea {
+        height: 200px;
+    }
+}
+
+.addImage {
+    border: 2px dashed gainsboro;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: gray;
+    transition: all .3s ease-in-out;
+    &:hover {
+        border: 2px dashed orangered;
+        .empty {
+            color: orangered;
+            fill: orangered;
+        }
+    }
+    .empty {
+        width: 100%;
+        min-height: 135px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        fill: gray;
+        svg {
+            transition: all .3s ease-in-out;
+        }
+        span {
+            transition: all .2s ease-in-out;
+        }
+    }
+    .imageContainer {
+        z-index: 5;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            .icon {
+                opacity: 1;
+                fill: red;
+            }
+        }
+        img {
+            object-fit: cover;
+        }
+        .icon {
+            transition: all .3s ease-in-out;
+            opacity: 0;
+            position: absolute;
+            fill: gray;
+            box-shadow: 0 0 10px rgba(0,0,0,.3);
+        }
+    }
+}
+
+.double {
+    gap: 20px;
+    display: flex;
+}
